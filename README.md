@@ -4,7 +4,7 @@
 
 Anchor is a command-line tool for managing your anchors using a local SQLite database.
 
-**Yes, anchors are URLs.**
+> **Yes, anchors are URLs.**
 
 ## Usage
 
