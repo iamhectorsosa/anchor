@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"net/url"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -39,6 +40,13 @@ To add anchors, use: anchor [key='value']`,
 
 				key := inputSlice[0]
 				value := strings.TrimSpace(strings.Trim(inputSlice[1], "'"))
+
+				parsedURL, err := url.Parse(strings.ReplaceAll(value, "\\", ""))
+				if err != nil {
+					return log.Error("url.Parse, err=%v", err)
+				}
+
+				value = parsedURL.String()
 
 				db, cleanup, err := database.New()
 				if err != nil {
@@ -166,6 +174,13 @@ var update = &cobra.Command{
 
 		key := inputSlice[0]
 		newValue := strings.TrimSpace(strings.Trim(inputSlice[1], "'"))
+
+		parsedURL, err := url.Parse(strings.ReplaceAll(newValue, "\\", ""))
+		if err != nil {
+			return log.Error("url.Parse, err=%v", err)
+		}
+
+		newValue = parsedURL.String()
 
 		db, cleanup, err := database.New()
 		if err != nil {
