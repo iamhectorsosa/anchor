@@ -4,7 +4,7 @@
 
 Anchor is a command-line tool for managing your anchors using a local SQLite database.
 
-![demo](./demo.gif)
+![demo](./assets/demo.gif)
 
 > **Yes, anchors are URLs.**
 
@@ -22,41 +22,13 @@ Manage anchors with the same known patterns as aliases. Calling anchors automati
 
 Here are some basic commands:
 
-```bash
-# Creates an anchor
-anchor [key='value']
-# Calls an anchor
-anchor [key]
-# Export anchors
-anchor export --path ~/
-# Import anchors
-anchor import --url https://gist..
-```
+![basics](./assets/basics.svg)
 
 ## Commands
 
 Run the help command to get an updated list of all commands.
 
-```bash
-❯ anchor help
-Anchor is a CLI tool for managing your anchors.
-
-To get a anchor, use: anchor [key] [...$1]
-To add anchors, use: anchor [key='value']
-
-Usage:
-  anchor [key] [...$1] | [key='value'] [flags]
-  anchor [command]
-
-Available Commands:
-  delete      Delete an anchor
-  export      Export all anchors
-  help        Help about any command
-  import      Import anchors
-  ls          List all anchors
-  reset       Reset all anchors
-  update      Update a anchors
-```
+![help](./assets/help.svg)
 
 ## Development
 
