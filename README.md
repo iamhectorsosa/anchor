@@ -2,7 +2,9 @@
 
 ![code coverage badge](https://github.com/iamhectorsosa/anchor/actions/workflows/ci.yml/badge.svg)
 
-Anchor is a command-line tool for managing your anchors using a local SQLite database. **Yes, anchors are URLs.**
+Anchor is a command-line tool for managing your anchors using a local SQLite database.
+
+**Yes, anchors are URLs.**
 
 ## Usage
 
